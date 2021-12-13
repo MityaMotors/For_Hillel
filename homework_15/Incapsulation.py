@@ -1,5 +1,5 @@
-from HW15.Class_Dog import Dog
-from HW15.Colors_of_dogs import Colors
+from homework_15.Class_Dog import Dog
+from homework_15.Colors_of_dogs import Colors
 from enum import Enum
 
 

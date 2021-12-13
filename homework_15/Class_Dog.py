@@ -1,4 +1,4 @@
-from HW15.Colors_of_dogs import Colors
+from homework_15.Colors_of_dogs import Colors
 class Dog:
     def __init__(
             self,
