@@ -4,11 +4,10 @@
 
 def square_perimetr_diagonal(a):
     perimetr = a * 4
-    s = a * a
-    diagonal = (a ** 2) / 2
-    diagonal = diagonal ** 0.5
+    square = a * a
+    diagonal = 2 ** (0.5)*a
 
-    result = (perimetr, s, diagonal)
+    result = (perimetr, square, diagonal)
 
     return result
 
