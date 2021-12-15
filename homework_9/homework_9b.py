@@ -2,10 +2,10 @@
 периметр квадрата, площадь квадрата и диагональ квадрата."""
 
 
-def square_perimetr_diagonal(a):
+def square_perimetr_diagonal(a: int):
     perimetr = a * 4
     square = a * a
-    diagonal = 2 ** (0.5)*a
+    diagonal = 2 ** (0.5) * a
 
     result = (perimetr, square, diagonal)
 
