@@ -3,7 +3,7 @@
   / — разделить (первое на второе). В остальных случаях вернуть строку Not known operation: """
 
 
-def arithmetic(first_arg: int, second_arg: int, third_arg) -> float:
+def arithmetic(first_arg: int, second_arg: int, third_arg) -> int | float | str:
     if third_arg == "+":
         return first_arg + second_arg
     elif third_arg == "-":
@@ -16,7 +16,7 @@ def arithmetic(first_arg: int, second_arg: int, third_arg) -> float:
         return "Not known operation!!!"
 
 
-first_arg = int(input('Please enter the first argument: '))
-second_arg = int(input('Please enter the first argument: '))
-third_arg = input('Please enter the operation (for example +, -, *, / ) : ')
-print("The result is:", arithmetic(first_arg, second_arg, third_arg))
+# first_arg = int(input('Please enter the first argument: '))
+# second_arg = int(input('Please enter the first argument: '))
+# third_arg = input('Please enter the operation (for example +, -, *, / ) : ')
+# print("The result is:", arithmetic(first_arg, second_arg, third_arg))
