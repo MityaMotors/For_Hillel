@@ -1,5 +1,4 @@
 import unittest
-from selenium.webdriver.common.keys import Keys
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.remote.webelement import WebElement
@@ -30,6 +29,7 @@ class Lms_Hillel_auth(unittest.TestCase):
             input_password.send_keys("Mitya232")
             click_button: WebElement = driver.find_element(By.XPATH, "/html/body/app-root/div/app-access/div/div[1]/app-login/div/div/form/app-button/button")
             click_button.click()
+            driver.execute_script("window.scrollTo(0, +1080)")
 
             element_exit: WebElement = wait.until(
                 EC.presence_of_element_located((By.XPATH, '/html/body/app-root/div/app-page/div/div[2]/div/div/div/div/app-dashboard/div/div[2]/app-profile-simple/div[2]/button'))
