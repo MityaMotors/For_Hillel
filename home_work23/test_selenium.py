@@ -1,5 +1,6 @@
 import unittest
 from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 from selenium.webdriver.remote.webelement import WebElement
 from selenium.webdriver.support.ui import WebDriverWait
@@ -8,10 +9,12 @@ from selenium.webdriver.support import expected_conditions as EC
 
 class Lms_Hillel_auth(unittest.TestCase):
     def setUp(self) -> None:
+        """The test"""
         self.driver = webdriver.Chrome()
         self.driver.get('https://lms.ithillel.ua/auth')
         self.driver.fullscreen_window()
 
+    @unittest.skip
     def test_entrance_with_correct_data(self):
         try:
             """Test with correct login and password"""
@@ -26,7 +29,7 @@ class Lms_Hillel_auth(unittest.TestCase):
                 EC.presence_of_element_located((By.XPATH, '//div[1]/app-login//div[2]/div/input'))
             )
             input_password.click()
-            input_password.send_keys("Mitya232")
+            input_password.send_keys("*******")
             click_button: WebElement = driver.find_element(By.XPATH, "/html/body/app-root/div/app-access/div/div[1]/app-login/div/div/form/app-button/button")
             click_button.click()
             driver.execute_script("window.scrollTo(0, +1080)")
