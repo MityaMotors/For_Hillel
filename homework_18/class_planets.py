@@ -7,9 +7,9 @@ class Planet(ABC):
         self.size = size
         self.shape = shape
 
-    def burning(self):
+    def burn(self):
        ...
 
-    def frozen(self):
-        raise Exception(f"Method {self.frozen.__name__} not implemented in {self.__class__.__name__}")
+    def froze(self):
+        raise Exception(f"Method {self.froze.__name__} not implemented in {self.__class__.__name__}")
 
