@@ -6,6 +6,13 @@ from selenium.webdriver.remote.webelement import WebElement
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
+options = webdriver.ChromeOptions()
+options.add_argument('headless')
+options.add_argument('--disable-infobars')
+options.add_argument('--disable-dev-shm-usage')
+options.add_argument('--no-sandbox')
+options.add_argument('--remote-debugging-port=9222')
+
 
 class Lms_Hillel_auth(unittest.TestCase):
     def setUp(self) -> None:
@@ -14,7 +21,6 @@ class Lms_Hillel_auth(unittest.TestCase):
         self.driver.get('https://lms.ithillel.ua/auth')
         self.driver.fullscreen_window()
 
-    @unittest.skip
     def test_entrance_with_correct_data(self):
         try:
             """Test with correct login and password"""
@@ -29,7 +35,7 @@ class Lms_Hillel_auth(unittest.TestCase):
                 EC.presence_of_element_located((By.XPATH, '//div[1]/app-login//div[2]/div/input'))
             )
             input_password.click()
-            input_password.send_keys("********")
+            input_password.send_keys("Mitya23")
             click_button: WebElement = driver.find_element(By.XPATH, "//div[1]/app-login//app-button/button")
             click_button.click()
             driver.execute_script("window.scrollTo(0, +1080)")
@@ -41,6 +47,7 @@ class Lms_Hillel_auth(unittest.TestCase):
                 print("The entrance was completed")
         except:
             raise Exception("The entrance was failed")
+
 
     def test_entrance_with_incorrect_email(self):
         try:
@@ -60,4 +67,3 @@ class Lms_Hillel_auth(unittest.TestCase):
                 print("The error message is shown")
         except:
             raise Exception("The error message isn't shown")
-

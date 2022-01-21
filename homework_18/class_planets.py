@@ -1,5 +1,6 @@
 from abc import ABC
 """The abstract class for all planets"""
+
 class Planet(ABC):
     def __init__(self, name: str, temperature: int, size: int, shape: str) -> None:
         self.name = name
