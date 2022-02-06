@@ -17,8 +17,7 @@ array = respond_text.split('/&q;,&q;title&q;:&q;')
 for item in array[1::]:
     item.replace('image_header_list&q;,&q;order&q', '')
     p.append(item.split('&q;,&q;order&q;:')[0])
-print("\nTask 1\n")
-pp.pprint(p)
+pp.pprint(f"Homework6/1: {p}")
 
 """Создать словарь содержащий в качестве ключей имя раздела с задачи 1
  и в качестве значений - url адресс раздела (href=url) ."""
@@ -31,8 +30,8 @@ for item in array_link:
 dict_p_link = {}
 for index in range(len(p)):
     dict_p_link[p[index]] = link[index]
-print('\nTask 2\n')
-pp.pprint(dict_p_link)
+pp.pprint (f"Homework6/2 \n {dict_p_link}")
+
 
 
 
