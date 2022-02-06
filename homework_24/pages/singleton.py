@@ -10,3 +10,4 @@ class Singleton:
 
     def __init__(self, driver=None):
         self._driver = driver
+

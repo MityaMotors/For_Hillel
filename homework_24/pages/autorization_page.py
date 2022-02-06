@@ -30,3 +30,6 @@ class AutorizationPage(BasePage):
         self._click_on_element(self.__enter_button)
 
         return HomePage(self._driver)
+
+    def enter_text_log_field(self):
+        self._enter_text_log_field(self.__input_login_locator)

@@ -36,7 +36,7 @@ class BasePage(Singleton):
                 (By.XPATH, by)
             )
         )
-        element.send_keys("lucavica@ukr.net")
+        element.send_keys()
 
     def _enter_text_pass_field(self, by: str):
         element = self.__wait.until(
@@ -44,7 +44,7 @@ class BasePage(Singleton):
                 (By.XPATH, by)
             )
         )
-        element.send_keys("Mitya232")
+        element.send_keys()
 
     def _get_title(self, text: str) -> str:
         locator = f"{self.__title_locator}[contains(text(), '{text}')]"
